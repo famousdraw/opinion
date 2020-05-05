@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{title}}-opinion detect system</title>
+    {% else %}
+    <title>opinion</title>
+    {% endif %}
+</head>
+<body>
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+<hr>
+    {% block content %}{%endblock%}
+</body>
+</html>
